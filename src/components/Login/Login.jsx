@@ -4,8 +4,6 @@ import './Login.css';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
-
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
@@ -21,11 +19,6 @@ const Login = () => {
 
   const validateForm = () => {
     const errors = {};
-    if (!name) {
-      errors.name = 'Name is required';
-    } else if (name.length === 0){
-      errors.email = 'Name is invalid';
-    }
     if (!email) {
       errors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -42,18 +35,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h1>Login</h1>
-        <div className="form-group">
-          <input
-            type="name"
-            id="name"
-            placeholder='name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          {errors.email && <span className="error">{errors.email}</span>}
-        </div>
+        <p>SpeakToMe</p>
         <div className="form-group">
           <input
             type="email"
@@ -76,7 +58,8 @@ const Login = () => {
           />
           {errors.password && <span className="error">{errors.password}</span>}
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Sign in</button>
+        <label htmlFor="text">You don't have an account?<a href='#'> register</a></label>
       </form>
     </div>
   );

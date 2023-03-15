@@ -1,3 +1,8 @@
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
+
 .login-container {
     background-color: rgb(128, 171, 221);
   display: flex;
@@ -7,7 +12,7 @@
 }
 
 .login-form {
-    background-color: #fff;
+  background-color: #fff;
   width: 20%;  
   display: flex;
   flex-direction: column;
@@ -16,8 +21,12 @@
   border-radius: 5px;
 }
 
-.login-form h1 {
-  margin-bottom: 20px;
+.login-form > p {
+  margin: 30px auto;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+
 }
 
 .form-group {
@@ -27,7 +36,8 @@
 }
 
 label {
-  margin-bottom: 5px;
+  margin: 15px auto;
+  font-size: small;
 }
 
 input {
@@ -36,6 +46,10 @@ input {
   border: none;
   border-bottom: 1px solid #ccc;
 }
+
+/* input ::placeholder {
+    border: none;
+} */
 
 button {
   padding: 10px;
