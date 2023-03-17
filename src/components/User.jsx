@@ -7,7 +7,7 @@ const user = () => {
        <Avatar githubHandle="sitebase" size={50} round="20px" />
        <div>
        <p className="name">John Norton</p>
-       <p className="message">hello</p>
+       {/* <p className="message">hello</p> */}
        </div>
        
        </div>

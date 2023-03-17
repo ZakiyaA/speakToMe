@@ -133,7 +133,11 @@ margin-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+}
+
+.text {
+  font-size: 5px;
 }
 
 .search-input {
