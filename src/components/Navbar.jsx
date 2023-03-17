@@ -5,11 +5,11 @@ import {GoogleLogout} from 'react-google-login';
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <div className="right">
+        <div className="left">
             <span>SpeakToMe</span>
         </div>
-        <div className="left">
-           <Avatar githubHandle="sitebase" size={30} round="20px" />
+        <div className="right">
+           <Avatar githubHandle="sitebase" size={20} round="20px" />
            <span className="name">John Norton</span>
            <button>Logout</button>
            {/* <GoogleLogout
