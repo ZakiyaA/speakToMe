@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './Login.css';
+import '../index.css'
+import { GoogleLogin } from '@react-oauth/google';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
@@ -19,6 +21,9 @@ const Login = () => {
 
   const validateForm = () => {
     const errors = {};
+    if (!name) {
+        errors.name = 'Name is required';
+      } 
     if (!email) {
       errors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -36,11 +41,23 @@ const Login = () => {
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <p>SpeakToMe</p>
+        <p>Register</p>
+        <div className="form-group">
+          <input
+            type="name"
+            id="name"
+            placeholder="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          {errors.email && <span className="error">{errors.email}</span>}
+        </div>
         <div className="form-group">
           <input
             type="email"
             id="email"
-            placeholder='email'
+            placeholder="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -51,15 +68,19 @@ const Login = () => {
           <input
             type="password"
             id="password"
-            placeholder='password'
+            placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
           {errors.password && <span className="error">{errors.password}</span>}
         </div>
-        <button type="submit">Sign in</button>
-        <label htmlFor="text">You don't have an account?<a href='#'> register</a></label>
+        <input  style={{display:'none'}}   type='file' name="file"/>
+        <label htmlFor='file'>bbbb</label>       
+         <button type="submit">Sign Up</button>
+        <label htmlFor="text">
+          You already have an account?<a href="#"> Login</a>
+        </label>
       </form>
     </div>
   );

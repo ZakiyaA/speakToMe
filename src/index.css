@@ -1,13 +1,231 @@
-body {
+
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Prompt', sans-serif;
+  --main-color: rgb(128, 171, 221);
+  --dark-color: rgb(70, 64, 102);
+  --light-color: rgb(106, 98, 151);
+  --bright-color: rgb(219, 215, 241);
 }
+
+
+.login-container {
+background-color: var(--main-color);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.login-form {
+background-color: #fff;
+width: 25%;  
+display: flex;
+flex-direction: column;
+padding: 30px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.login-form p:first-child {
+color: rgb(49, 43, 43);
+margin: 5px auto;
+font-size: 20px;
+line-height: 30px;
+font-weight: bold;
+}
+
+.login-form p:nth-child(2) {
+  color: rgb(49, 43, 43);
+  margin: 5px auto;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+}
+
+label {
+margin: 15px auto;
+font-size: small;
+}
+
+input {
+padding: 10px;
+border-radius: 5px;
+border: none;
+border-bottom: 0.5px solid #ccc;
+outline: none;
+}
+
+/* input ::placeholder {
+  border: none;
+} */
+
+button {
+padding: 10px;
+border-radius: 5px;
+border: none;
+background-color: #614d83;
+color: rgb(235, 219, 219);
+cursor: pointer;
+}
+
+button:hover {
+/* background-color: #0069d9; */
+}
+
+.error {
+color: red;
+font-size: 12px;
+margin-top: 5px;
+}
+
+.home-page {
+  background-image: url('./assets/images/whatsapp-background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--dark-color);
+  display: flex;
+  height: 80vh;
+  width: 50vw;
+  overflow: hidden;
+  border-radius: 2%;
+  box-shadow: 2px 2px #d8d3d3;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  -ms-border-radius: 2%;
+  -o-border-radius: 2%;
+}
+
+.sidebar {
+  flex-grow: 1;
+}
+
+
+
+ .navbar {
+  background-color: #392c5c;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(175, 167, 185);
+  align-items: center;
+  padding: 0 10px 0 10px ;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  border-radius: 0;
+  background-color:var(--dark-color);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.search-input ::placeholder {
+  color: white;
+}
+
+.user {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+.user p:first-child {
+  font-weight: bold;
+  color: white;
+}
+
+.user p:nth-child(2) {
+  color: white;
+}
+
+.chat {
+  flex-grow: 98;
+  background-color: var(--bright-color);
+}
+.chat-info {
+  background-color: var(--light-color);
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  /* justify-items: center; */
+  align-items: center;
+  padding: 0 10px;
+}
+
+.chat-icons {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.message-body {
+  height: 390px;
+  /* height: calc(100% - 50px); */
+  overflow: auto;
+}
+
+.type-area {
+  background-color: white;
+  display: flex;
+  height: 10vh;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.type-area input{
+  /* height: 10vh; */
+  border-radius: 0%;
+  border: none;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
+ 
+  /* width: 100vw; */
+}
+
+/* .type-area button {
+  position: absolute;
+  top: 25%;
+  right: 7px;
+} */
+
+.send {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
