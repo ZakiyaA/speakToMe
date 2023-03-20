@@ -222,7 +222,7 @@ margin-top: 5px;
   background-color: white;
   display: flex;
   height: 10vh;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   /* gap: 10px; */
 }
@@ -249,6 +249,15 @@ margin-top: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
 
+.send button {
+  margin-right: 10px;
+  border-radius: 0%;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
 }
 
