@@ -7,6 +7,10 @@ const Message = () => {
     <p>message1</p>
     <p>message1</p>
     <p>message1</p>
+    <p>message1</p>
+    <p>message1</p>
+    <p>message1</p>
+    <p>message1</p>
    
 </div>
   )
