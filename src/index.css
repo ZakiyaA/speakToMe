@@ -213,7 +213,7 @@ margin-top: 5px;
 
 
 .message-body {
-  height: 390px;
+  height: 400px;
   /* height: calc(100% - 50px); */
   overflow: auto;
 }

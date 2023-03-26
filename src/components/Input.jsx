@@ -15,11 +15,12 @@ const Input = () => {
                 />
             </div>
             <div className="send">
-              <input type="file" name="upload" id="upload" 
-              style={{display: 'none'}}
-              />
-              {/* <img src={''} alt=""  /> */}
               <IoIosAttach size={20}/>
+              <input type="file" name="upload" id="upload" style={{display: 'none'}}/>
+              {/* <img src={''} alt=""  /> */}
+              <label htmlFor='file'>
+              <IoIosAttach size={20}/>
+              </label>
               <button className='submit-message' type="submit">Send</button>
             </div>
         </div>
